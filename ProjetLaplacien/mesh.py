@@ -35,7 +35,7 @@ class Mesh:
             if g2l[v2] >= 0: l_vertices2elements[g2l[v2]].append(iElt)
             if g2l[v3] >= 0: l_vertices2elements[g2l[v3]].append(iElt)
 
-        begin_vertex2elements = np.zeros((nb_vertices+1), dtype=np.int)
+        begin_vertex2elements = np.zeros((nb_vertices+1), dtype=int)
         for iVert in range(nb_vertices):
             begin_vertex2elements[iVert+1] = begin_vertex2elements[iVert] + len(l_vertices2elements[iVert])
         vertex2elements = np.empty(begin_vertex2elements[-1], dtype=np.int64)
