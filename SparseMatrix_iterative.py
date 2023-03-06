@@ -16,7 +16,7 @@ from conjugate_gradient import *
 def g(x,y) :
     return cos(2*pi*x)+sin(2*pi*y)
 
-m,cl = mesh.read("CarreMedium.msh")
+m,cl = mesh.read("CarrePetit.msh")
 coords    = m.vertices
 elt2verts = m.elt2verts
 nbVerts = coords.shape[0]
